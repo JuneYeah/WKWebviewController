@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body  >
+        <p id="result">显示token：</p>
+		<script type="text/javascript">
+		function login(){
+            window.webkit.messageHandlers.getWKWebViewData.postMessage('getToken')
+		}
+        function updateJSData(result){
+            document.getElementById("result").innerHTML = 'updateJSData:' + result;
+        }
+
+		</script>
+		<button onclick = "login()" style = "font-size: 18px;">点击getToken</button>
+	</body>
+</html>
